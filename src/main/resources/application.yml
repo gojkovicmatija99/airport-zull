@@ -33,6 +33,7 @@ management:
 #   url: http://localhost:8080/
 
 # Expose Headers
+zuul:
  sensitiveHeaders: Cookie,Set-Cookie
 ribbon:
  ReadTimeout: 10000
