@@ -15,19 +15,13 @@ eureka:
  serviceurl:
   defaultzone: http://localhost:8761/eureka/
 
-hystrix:
- command:
-  default:
-   execution:
-    isolation:
-     thread:
-      timeoutInMilliseconds: 60000
-
 management:
  endpoints:
   web:
    exposure:
     include: "*"
+
+
 
 
 # Hardcode service
@@ -39,5 +33,6 @@ management:
 #   url: http://localhost:8080/
 
 # Expose Headers
-zuul:
  sensitiveHeaders: Cookie,Set-Cookie
+ribbon:
+ ReadTimeout: 10000
